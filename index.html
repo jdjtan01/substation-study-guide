@@ -150,6 +150,9 @@ td.c,th.c{text-align:center}
 figure{margin:22px 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
 figcaption{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
 figure svg{width:100%;height:auto;display:block}
+figure img{width:100%;height:auto;display:block;border-radius:8px}
+figcaption .credit{display:block;font-size:12px;margin-top:4px;opacity:.85}
+figcaption .credit a{color:inherit;text-decoration:underline}
 .fig-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 
 .formula{font-family:"IBM Plex Mono",monospace;background:var(--code);border-radius:10px;padding:12px 16px;overflow-x:auto;margin:14px 0;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
@@ -284,6 +287,11 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
 <h3>What is a substation?</h3>
 <p>A <b>substation</b> is an assembly of high-voltage equipment — transformers, circuit breakers, disconnectors, busbars, instrument transformers, surge arresters and their protection, control and communication systems — installed at one site to connect, convert and protect parts of the electrical network. Substations sit between generation, transmission lines and distribution feeders, acting as the junctions where power is redirected, stepped up or down, and isolated when something goes wrong.</p>
 <div class="callout note"><strong>Mental model</strong>Think of a substation as a <i>highway interchange</i> for electricity: the busbars are the roads, circuit breakers are the gates that can close instantly in an emergency, transformers are the ramps between highways of different “speeds” (voltages), and the control room is the traffic management centre.</div>
+
+<figure class="photo">
+<img src="images/intro-killin-substation.jpg" alt="Outdoor 132/33 kV substation with transformers, gantries and busbars" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A 132/33 kV outdoor substation in Scotland: incoming lines, busbar gantries, breakers and transformers in one fenced yard.<span class="credit">Photo: John Adams, <a href="https://commons.wikimedia.org/wiki/File:Killin_substation_0125.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a>, via Wikimedia Commons / Geograph</span></figcaption>
+</figure>
 
 <h3>Where substations fit in the power system</h3>
 <figure>
@@ -457,6 +465,11 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
 <h2>Types of Substations</h2>
 <p class="lead">Substations are classified in several overlapping ways: by what they do, how their HV parts are insulated, where and how they are installed, and their voltage level.</p>
 
+<figure class="photo">
+<img src="images/types-creyke-beck.jpg" alt="Very large air-insulated substation covering several acres" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A large air-insulated (AIS) transmission substation. Open-air designs like this need acres of land, which is why compact GIS is used in cities.<span class="credit">Photo: Andy Beecroft, <a href="https://commons.wikimedia.org/wiki/File:Electricity_Sub_Station_-_geograph.org.uk_-_999350.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a>, via Wikimedia Commons / Geograph</span></figcaption>
+</figure>
+
 <h3>Classification by function</h3>
 <div class="grid">
   <div class="card"><h4>Generating (step-up) substation</h4><p>At the power plant. The generator step-up (GSU) transformer raises 11–25 kV to transmission voltage.</p><span class="tag">GSU</span><span class="tag">Plant switchyard</span></div>
@@ -495,6 +508,11 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
   <li><b>Containerised / E-house / skid-mounted</b> – prefabricated modules shipped tested, common for renewables, mining and fast-track projects.</li>
   <li><b>Offshore</b> – platform substations for offshore wind farms.</li>
 </ul>
+
+<figure class="photo" style="max-width:380px;margin-left:auto;margin-right:auto">
+<img src="images/types-pole-mounted-transformer.jpg" alt="Pole-mounted transformer stepping subtransmission voltage down to low voltage" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A pole-mounted transformer stepping subtransmission voltage down to low voltage for a remote site, the simplest form of substation.<span class="credit">Photo: Kkiefuik, <a href="https://commons.wikimedia.org/wiki/File:Station_Service_Transformer_Mounted_on_a_Utility_Pole.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+</figure>
 
 <h3>Other classifications</h3>
 <div class="tbl"><table>
@@ -640,6 +658,11 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
 <section class="chapter" id="transformers" data-blurb="Construction, cooling, tap changers, vector groups, paralleling and accessories.">
 <h2>Power Transformers</h2>
 <p class="lead">The power transformer is the most expensive and most critical item in most substations. Lead times can exceed a year, so understanding, protecting and maintaining it is a core substation skill.</p>
+
+<figure class="photo">
+<img src="images/transformers-step-down.jpg" alt="Step-down power transformer with bushings and radiators in a small substation" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A step-down transformer in a small substation, with an incoming line, a circuit switcher and the transformer near the centre of the yard.<span class="credit">Photo: Wtshymanski, public domain, via <a href="https://commons.wikimedia.org/wiki/File:Electrical_Substation.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption>
+</figure>
 
 <h3>Operating principle</h3>
 <p>An alternating current in the primary winding creates an alternating magnetic flux in the laminated steel core, which induces a voltage in the secondary winding. The voltage ratio equals the turns ratio, and the current ratio is its inverse.</p>
@@ -789,6 +812,11 @@ I_rated = S / (√3 · V_LL)       (three-phase rated current)</div>
 <text class="tc-danger" x="312" y="48">TRV overshoot</text>
 <text class="tc-danger" x="430" y="222">Recovery voltage → system voltage</text>
 </svg><figcaption>After the contacts part, current keeps flowing through the arc until the next natural current zero. The breaker must then withstand the fast-rising transient recovery voltage (TRV) without the arc re-striking.</figcaption></figure>
+<figure class="photo">
+<img src="images/switchgear-sf6-breaker-115kv.jpg" alt="Three-pole 115 kV SF6 circuit breaker mounted outdoors" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A three-phase 115 kV SF₆ circuit breaker. Current enters and leaves through the bare leads at the top of each pole.<span class="credit">Photo: Wtshymanski, public domain, via <a href="https://commons.wikimedia.org/wiki/File:Circuit_Breaker_115_kV.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 <h3>Breaker types by interrupting medium</h3>
 <div class="tbl"><table>
 <tr><th>Type</th><th>Medium &amp; principle</th><th>Voltage range</th><th>Status</th></tr>
@@ -838,6 +866,11 @@ I_rated = S / (√3 · V_LL)       (three-phase rated current)</div>
 </table></div>
 <p><b>Earthing (grounding) switches</b> are usually mounted on the disconnector frame and connect isolated conductors to earth. Earth switches on lines may need induced-current switching capability where parallel energised lines induce voltage.</p>
 <p><b>Load-break switches</b> (common at MV) can interrupt load current but not fault current; combined with fuses they form a cheap protected switch for ring main units (RMUs).</p>
+
+<figure class="photo">
+<img src="images/switchgear-disconnectors-380kv.jpg" alt="Long row of 380 kV disconnectors in a substation" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A long row of 380 kV disconnectors. Disconnectors give visible isolation but cannot break load current, hence the interlocking with breakers.<span class="credit">Photo: Ikar.us, <a href="https://commons.wikimedia.org/wiki/File:Umspannwerk-Pulverdingen_380kV-Trennschalter.jpg" target="_blank" rel="noopener">CC BY 3.0 DE</a>, via Wikimedia Commons</span></figcaption>
+</figure>
 
 <h3>Interlocking</h3>
 <p>Interlocks prevent dangerous operating sequences. Classic rules:</p>
@@ -894,6 +927,11 @@ I_rated = S / (√3 · V_LL)       (three-phase rated current)</div>
 <div class="callout danger"><strong>Never open-circuit a CT secondary</strong>With primary current flowing and the secondary open, all primary ampere-turns become magnetising force: the core saturates and the secondary can develop thousands of volts — lethal to personnel and destructive to insulation. Always short the CT secondary with shorting links before disconnecting a relay or meter.</div>
 <p><b>CT saturation</b> during heavy faults (especially with DC offset) distorts secondary current and can cause differential relays to mis-operate. Sizing for knee-point voltage and using relays with saturation detection mitigates this.</p>
 
+<figure class="photo">
+<img src="images/equipment-sf6-ct-110kv.jpg" alt="SF6-insulated 110 kV current transformer on a support structure" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>An SF₆-insulated 110 kV current transformer (type TGFM-110) in a traction substation.<span class="credit">Photo: Vivan755, <a href="https://commons.wikimedia.org/wiki/File:SF6_current_transformer_TGFM-110_Russia.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons</span></figcaption>
+</figure>
+
 <h3>Voltage transformers (VTs / PTs) and CVTs</h3>
 <ul>
   <li><b>Inductive (magnetic) VT</b> – wound transformer. Standard secondary 110 V or 110/√3 V (IEC); 120 V / 69.3 V (IEEE). Common up to ~145 kV.</li>
@@ -903,6 +941,11 @@ I_rated = S / (√3 · V_LL)       (three-phase rated current)</div>
 </ul>
 <div class="callout danger"><strong>Never short-circuit a VT secondary</strong>A VT behaves like a voltage source; shorting the secondary causes a huge current that destroys it. Secondary circuits are protected by fuses or MCBs, and VT-fuse-failure supervision blocks distance protection when the voltage is lost.</div>
 <p><b>Non-conventional instrument transformers (NCITs)</b> – optical CTs, Rogowski coils and resistive/capacitive dividers with digital output via merging units are used in digital substations (IEC 61869 series).</p>
+
+<figure class="photo" style="max-width:380px;margin-left:auto;margin-right:auto">
+<img src="images/equipment-ccvt.jpg" alt="Capacitor-coupled voltage transformer inside a substation" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A capacitor-coupled voltage transformer (CCVT) in a substation: stacked capacitor units on top of the base housing the electromagnetic unit.<span class="credit">Photo: Yoshieslunchbox, <a href="https://commons.wikimedia.org/wiki/File:Substation_CCVT.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+</figure>
 
 <h3>Surge arresters</h3>
 <p>Arresters limit overvoltages from lightning and switching by conducting surge current to earth, then returning to a high-impedance state. Modern arresters are <b>gapless metal-oxide (MOV / ZnO)</b> with porcelain or polymer housings.</p>
@@ -985,6 +1028,11 @@ I_rated = S / (√3 · V_LL)       (three-phase rated current)</div>
 <section class="chapter" id="protection" data-blurb="Relays, ANSI numbers, zones, coordination, distance and differential protection.">
 <h2>Protection Systems</h2>
 <p class="lead">Protection detects abnormal conditions and isolates the smallest possible part of the system, fast enough to limit damage and keep the grid stable.</p>
+
+<figure class="photo">
+<img src="images/protection-relay-testing.jpg" alt="Technician testing a protective relay during substation maintenance" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none'">
+<figcaption>A technician tests a protective relay during routine substation maintenance. Periodic secondary injection testing proves the relay still operates to its settings.<span class="credit">Photo: U.S. Air Force / Senior Airman Brooke Moeder, public domain (DoD imagery)</span></figcaption>
+</figure>
 
 <h3>Principles of good protection</h3>
 <div class="grid">
